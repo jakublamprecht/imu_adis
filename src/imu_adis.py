@@ -55,7 +55,7 @@ class MyForm:
 
     def __init__(self, parent=None):
         rospy.init_node('imu_adis')
-        self.imuPub = rospy.Publisher('imu/adis', Imu, queue_size=1000)
+        self.imuPub = rospy.Publisher('imu', Imu, queue_size=1000)
         self.rate = rospy.Rate(100)
         self.msg = Imu()
         self.seq = 0;
@@ -187,7 +187,7 @@ class MyForm:
                                             
                                             # Filling orientation information in the message
                                             
-                                            self.msg.header.frame_id = 'imu'
+                                            self.msg.header.frame_id = 'imu_adis'
                                             self.msg.header.stamp = rospy.Time.now()
                                             
                                             self.msg.orientation.x = self.AHRSDataStruct.q0
