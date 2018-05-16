@@ -55,7 +55,7 @@ class MyForm:
 
     def __init__(self, parent=None):
         rospy.init_node('imu_adis')
-        self.imuPub = rospy.Publisher('imu', Imu, queue_size=1000)
+        self.imuPub = rospy.Publisher('/adis/imu', Imu, queue_size=1000)
         self.rate = rospy.Rate(100)
         self.msg = Imu()
         self.seq = 0;
