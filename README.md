@@ -3,7 +3,7 @@
 ## Dependencies
 
 Make sure that there are following python packaged installed:
-* serial
+* pyserial
 * cobs
 
 To install those run:
