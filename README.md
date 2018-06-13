@@ -15,16 +15,24 @@ sudo pip install cobs
 
 ## How to get the node running
 
-First open new terminal window and run roscore
-
-After that in new terminal run (This snippet has default name of catkin workspace catkin_ws):
+First open new terminal window, navigate to ROS workspace directory and run roscore:
 
 ```bash
-cd ~/catkin_ws
+source devel/setup.bash
+roscore
+```
+
+After that in new terminal tab navigate to ROS workspace directory and run:
+
+```bash
 source devel/setup.bash
 catkin_make
 roslaunch imu_adis imu_adis.launch
 ```
+
+## Information
+
+Data is published to `/adis/imu` topic
 
 ## Known issues
 
